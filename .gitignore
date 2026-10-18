@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+backend/.venv/
+
+# Secrets and local configuration
+backend/.env
+frontend/.env
+frontend/.env.local
+
+# Runtime data (profile photos, consultation audio awaiting transcription)
+backend/uploads/
+backend/recordings/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

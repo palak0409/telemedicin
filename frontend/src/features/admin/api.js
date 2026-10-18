@@ -1,0 +1,15 @@
+import { api } from '../../services/apiClient'
+
+export const getStats = () => api.get('/admin/stats')
+export const listDoctors = (params) => api.get('/admin/doctors', params)
+export const getDoctor = (id) => api.get(`/admin/doctors/${id}`)
+export const updateVerification = (id, status, note) => api.patch(`/admin/doctors/${id}/verification`, { status, note })
+export const setUserActive = (id, isActive) => api.patch(`/admin/users/${id}/status`, { is_active: isActive })
+export const listPatients = (params) => api.get('/admin/patients', params)
+export const listAppointments = (params) => api.get('/admin/appointments', params)
+export const cancelAppointment = (id, reason) => api.post(`/admin/appointments/${id}/cancel`, { reason })
+export const listConsultations = (params) => api.get('/admin/consultations', params)
+export const listSpecializations = () => api.get('/admin/specializations')
+export const createSpecialization = (data) => api.post('/admin/specializations', data)
+export const updateSpecialization = (id, data) => api.put(`/admin/specializations/${id}`, data)
+export const deleteSpecialization = (id) => api.delete(`/admin/specializations/${id}`)
